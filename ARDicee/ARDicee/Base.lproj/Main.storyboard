@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DVI-Ub-EAQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1uK-Ub-QYV">
+            <objects>
+                <viewController id="DVI-Ub-EAQ" customClass="ViewController" customModule="ARDicee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K9q-Rm-EvN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-2f-39n">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-Md-Ekh">
+                                <rect key="frame" x="185" y="828" width="44" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="DVI-Ub-EAQ" eventType="touchUpInside" id="R0v-aM-RAz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z1f-he-m7W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dNr-Md-Ekh" firstAttribute="bottom" secondItem="Z1f-he-m7W" secondAttribute="bottom" id="8kh-gJ-pbu"/>
+                            <constraint firstItem="bZR-2f-39n" firstAttribute="top" secondItem="K9q-Rm-EvN" secondAttribute="top" id="K0y-kt-4b2"/>
+                            <constraint firstAttribute="bottom" secondItem="bZR-2f-39n" secondAttribute="bottom" id="N6X-EI-TXz"/>
+                            <constraint firstItem="dNr-Md-Ekh" firstAttribute="centerX" secondItem="K9q-Rm-EvN" secondAttribute="centerX" id="iGt-zL-E8d"/>
+                            <constraint firstItem="bZR-2f-39n" firstAttribute="leading" secondItem="Z1f-he-m7W" secondAttribute="leading" id="osw-l3-6ut"/>
+                            <constraint firstItem="Z1f-he-m7W" firstAttribute="trailing" secondItem="bZR-2f-39n" secondAttribute="trailing" id="rCF-K7-51N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ARView" destination="bZR-2f-39n" id="nEr-FZ-ybI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u85-DP-MU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.768115942029" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
